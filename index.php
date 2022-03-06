@@ -234,14 +234,14 @@ $select_work_content_result = mysqli_query($db_connection, $select_work_content)
                             </div>
                             <div class="about-content">
                                 <p><?=$after_assoc_about_content['description']?></p>
-                                <h3>Education:</h3>
+                                <h3>Skils:</h3>
                             </div>
                             <!-- Education Item -->
                             <?php foreach($select_skills_info_result as $skills):?>
                             <div class="education">
                                 <div class="year"><?= $skills['topic']?></div>
                                 <div class="line"></div>
-                                <div class="location">
+                                <div class="location ">
                                     <span><?= $skills['description']?></span>
                                     <div class="progressWrapper">
                                         <div class="progress">
@@ -334,7 +334,8 @@ $select_work_content_result = mysqli_query($db_connection, $select_work_content)
                             <div class="col-xl-2 col-lg-3 col-sm-6">
                                 <div class="fact-box text-center mb-50">
                                     <div class="fact-icon">
-                                        <i class="flaticon-award"></i>
+                                    <i class="fa <?=$counte['counter_icon']?>"></i>
+
                                     </div>
                                     <div class="fact-content">
                                         <h2><span class="count"><?=$counte['percentage']?></span></h2>
@@ -419,9 +420,9 @@ $select_work_content_result = mysqli_query($db_connection, $select_work_content)
                                 <h5>OFFICE IN <span>NEW YORK</span></h5>
                                 <div class="contact-list">
                                     <ul>
-                                        <li><i class="fas fa-map-marker"></i><span>Address :</span>Event Center park WT 22 New York</li>
-                                        <li><i class="fas fa-headphones"></i><span>Phone :</span>+9 125 645 8654</li>
-                                        <li><i class="fas fa-globe-asia"></i><span>e-mail :</span>info@exemple.com</li>
+                                        <li><i class="fa fa-map-marker"></i><span>Address :</span><?=$after_assoc_contact_info['address']?></li>
+                                        <li><i class="fa fa-phone"></i><span>Phone :</span><?=$after_assoc_contact_info['number']?></li>
+                                        <li><i class="fa fa-globe-asia"></i><span>e-mail :</span><?=$after_assoc_contact_info['email']?>m</li>
                                     </ul>
                                 </div>
                             </div>

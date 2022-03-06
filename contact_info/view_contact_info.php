@@ -32,8 +32,9 @@ $select_contact_info_result = mysqli_query($db_connection, $select_contact_info)
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                            <th>Discription</th>
-                                            <th>Image</th>
+                                            <th>Address</th>
+                                            <th>Number</th>
+                                            <th>Email</th>
                                             <th>Status</th>
                                             <th>Action</th>
 
@@ -43,7 +44,9 @@ $select_contact_info_result = mysqli_query($db_connection, $select_contact_info)
                                         <?php foreach ($select_contact_info_result as $key => $contact) { ?>
                                             <tr>
                                                 <td><?= ++$key ?></td>
-                                                <td>  <?= $contact['description'] ?></td>
+                                                <td>  <?= $contact['address'] ?></td>
+                                                <td>  <?= $contact['number'] ?></td>
+                                                <td>  <?= $contact['email'] ?></td>
                                               
                                                 <td>
                                                                               

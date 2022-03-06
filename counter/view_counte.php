@@ -32,7 +32,7 @@ $select_counte_info_result = mysqli_query($db_connection, $select_counte_info);
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                    
+                                            <th>Icon</th>
                                             <th>Percentage</th>
                                             <th>Status</th>
                                             <th>Action</th>
@@ -43,7 +43,8 @@ $select_counte_info_result = mysqli_query($db_connection, $select_counte_info);
                                         <?php foreach ($select_counte_info_result as $key => $counte) { ?>
                                             <tr>
                                                 <td><?= ++$key ?></td>
-                                      
+                                                <td> <i class="fa <?= $service['counter_icon'] ?>"></i></td>
+
                                                 <td>  <?= $counte['percentage'] ?></td>
                                               
                                                 <td>

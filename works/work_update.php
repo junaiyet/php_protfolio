@@ -4,6 +4,8 @@ require '../db.php';
 
 
 $id = $_POST['id'];
+$title = $_POST['title'];
+$catagory = $_POST['catagory'];
 $description = mysqli_real_escape_string($db_connection, $_POST['description']);
 
 
@@ -49,9 +51,9 @@ $description = mysqli_real_escape_string($db_connection, $_POST['description']);
 
 
    } else {
-      $ubdate_user = "UPDATE about_us SET description='$description' WHERE id=$id ";
+      $ubdate_user = "UPDATE about_us SET title=$title, catagory= $catagory description='$description' WHERE id=$id ";
       $ubdate_user_result = mysqli_query($db_connection, $ubdate_user);
 
       $_SESSION['success'] = 'User Updated! ';
-      header('location:view_about.php');
+      header('location:view_work.php');
    }
